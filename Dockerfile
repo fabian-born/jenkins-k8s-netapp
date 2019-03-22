@@ -1,5 +1,5 @@
 FROM node:7.4.0-alpine
-MAINTAINER Christopher Madden <madden@netapp.com>
+MAINTAINER Fabian Born <fabian.born@netapp.com>
 
 ADD . /srv/app
 WORKDIR /srv/app
