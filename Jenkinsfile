@@ -30,7 +30,7 @@ podTemplate(label: 'mypod', containers: [
         stage("Create Test instance") {
             container('helm') {
 
-               sh "helm install --name test --set service.nodePort=30001,cloneSource=prod,webappImage.tag=${env.BUILD_NUMBER} helm/webapp"
+               sh "helm install --name test --set service.nodePort=30001,cloneSource=prod,webappImage.tag=${env.BUILD_NUMBER} helm/webapp" --namespace cicd-demo
             }
         }
         
